@@ -356,8 +356,8 @@ st.markdown('Sistema de análise e visualização de dados de pedidos de uniform
 @st.cache_data
 def carregar_dados():
     try:
-        df = pd.read_csv(
-            "C:/Cursos/Asimov/Streamlit/Criando Aplicativos Web com Streamlit/Projeto Streamlit FIFA/proejetoUniforme/dataset/UNIFORME.csv")
+        df = pd.read_csv("/dataset/UNIFORME.csv")
+        # "C:/Cursos/Asimov/Streamlit/Criando Aplicativos Web com Streamlit/Projeto Streamlit FIFA/proejetoUniforme/dataset/UNIFORME.csv")
         df['DATA_SAIDA'] = pd.to_datetime(df['DATA_SAIDA'])
         return df
     except Exception as e:
