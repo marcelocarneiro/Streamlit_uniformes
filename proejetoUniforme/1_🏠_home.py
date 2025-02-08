@@ -9,7 +9,7 @@
 # st.sidebar.header("Filtros e Opções")
 
 # # Carregar dados do arquivo CSV
-# df = pd.read_csv(df = pd.read_csv("/dataset/UNIFORME.csv")
+# df = pd.read_csv(df = pd.read_csv("./dataset/UNIFORME.csv")
 
 
 # # Converter DATA_SAIDA para datetime, considerando o formato DD/MM/YYYY
