@@ -317,6 +317,7 @@
 
 # ********************************CLUADE************************************
 
+import os
 from datetime import datetime
 
 import pandas as pd
@@ -357,7 +358,8 @@ st.markdown('Sistema de análise e visualização de dados de pedidos de uniform
 def carregar_dados():
     try:
         # "C:/Cursos/Asimov/Streamlit/Criando Aplicativos Web com Streamlit/Projeto Streamlit FIFA/proejetoUniforme/dataset/UNIFORME.csv")
-        df = pd.read_csv("/dataset/UNIFORME.csv")
+        pathFile = os.path.join("dataset", "UNIFORME.csv")
+        df = pd.read_csv(pathFile)
         df['DATA_SAIDA'] = pd.to_datetime(df['DATA_SAIDA'])
         return df
     except Exception as e:
